@@ -2,6 +2,8 @@ import { Html, Head, Main, NextScript } from "next/document";
 import Script from "next/script";
 
 export default function Document() {
+  //const gtmId = 'GTM-TT8JSWMB'
+  const gtmId = 'GTM-N2GH86'
   return (
     <Html lang="en">
       <Head>
@@ -15,7 +17,7 @@ export default function Document() {
               new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
               j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-              })(window,document,'script','dataLayer', 'GTM-TT8JSWMB');
+              })(window,document,'script','dataLayer', '${gtmId}');
             `,
           }}
         />
@@ -24,7 +26,7 @@ export default function Document() {
       <body>
       <noscript>
         <iframe
-          src={`https://www.googletagmanager.com/ns.html?id=GTM-TT8JSWMB`}
+          src={`https://www.googletagmanager.com/ns.html?id=${gtmId}`}
           height="0"
           width="0"
           style={{ display: "none", visibility: "hidden" }}
